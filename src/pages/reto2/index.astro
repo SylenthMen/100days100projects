@@ -1,0 +1,132 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="reto 2 blog preview card">
+  <article>
+    <div class="ilustration">
+      <img src="/illustration-article.svg" alt="" />
+    </div>
+    <div class="cabecera">
+      <span class="badge">Etiqueta</span>
+      <p>Lorem ipsum dolor sit.</p>
+    </div>
+    <div class="cuerpo">
+      <h2>HTML & CSS foundations</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, culpa
+        aliquid. Blanditiis in minima ab fugiat amet mollitia optio quasi.
+      </p>
+    </div>
+    <footer>
+      <img src="/person.jpg" alt="profile picture" />
+      <p>manuel elizalde</p>
+    </footer>
+  </article>
+</Layout>
+
+<style>
+  :root {
+    --colorFondo: #f5d14e;
+    --colorCard: #fff;
+    --colorSombraCard: #000;
+    --colorBordeCard: #000;
+    --colorBadge: #f5d14e;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: var(--colorFondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100vh;
+  }
+
+  article {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorCard);
+    border: 2px solid var(--colorBordeCard);
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 5px 5px 0 0 var(--colorSombraCard);
+    transition: 0.3s all;
+  }
+
+  article .ilustration img {
+    width: 320px;
+    display: flex;
+    margin: auto;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+  article:hover .ilustration img {
+    transition: 0.3s;
+    transform: scale(1.01);
+  }
+
+  article .cabecera {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .cabecera .badge {
+    padding: 5px;
+    background-color: var(--colorBadge);
+    border-radius: 5px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    width: 70px;
+  }
+
+  article .cuerpo {
+    margin-top: 10px;
+  }
+
+  .cuerpo h2 {
+    font-weight: 800;
+    margin-bottom: 15px;
+    transition: 0.3s;
+  }
+
+  .cuerpo p {
+    font-size: 14px;
+    text-wrap: pretty;
+  }
+
+  article footer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  article footer img {
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  article footer p {
+    margin-left: 10px;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+
+  article:hover {
+    cursor: pointer;
+    box-shadow: 8px 8px 0 0 var(--colorSombraCard);
+  }
+
+  article:hover h2 {
+    transition: 0.3s all;
+    color: var(--colorFondo);
+  }
+</style>
