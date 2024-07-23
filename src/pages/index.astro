@@ -1,12 +1,39 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout>
   <h1>hola mundo</h1>
-  <ul>
-    <a href="/reto1"><li>reto 1 profile card</li></a>
-    <a href="/reto2"><li>reto 2 blog preview card</li></a>
-    <a href="/reto3"><li>reto 3 product info</li></a>
-  </ul>
+  <section class="cards">
+    <Card
+      imagen="/imagesProjects/1.png"
+      titulo="card personal information"
+      desc="tarjeta para mostrar informacion personal con links de redes sociales"
+      demo="/reto1"
+      codigo="https://github.com/SylenthMen/100days100projects/tree/main/src/pages/reto1"
+    />
+    <Card
+      imagen="/imagesProjects/2.png"
+      titulo="blog preview card"
+      desc="muestra una tarjeta con contenido de un blog"
+      demo="/reto2"
+      codigo="https://github.com/SylenthMen/100days100projects/tree/main/src/pages/reto2"
+    />
+    <Card
+      imagen="/imagesProjects/3.png"
+      titulo="product card"
+      desc="muestra una tarjeta con productos y descripciones para una tienda virtual responsive"
+      demo="/reto2"
+      codigo="https://github.com/SylenthMen/100days100projects/tree/main/src/pages/reto2"
+    />
+  </section>
 </Layout>
+
+<style>
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+</style>
