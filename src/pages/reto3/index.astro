@@ -1,0 +1,217 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Product Info">
+  <article>
+    <div class="foto">
+      <img src="/headphone.png" alt="product image" />
+    </div>
+    <div class="inf">
+      <span class="badge">free shipping</span>
+      <h2>razer kraken kitty edt gaming headset quartz</h2>
+      <del class="sale">$1,599</del>
+      <p class="price">$799</p>
+      <p class="desc">
+        the offer is valid until April 3 or as long as stock lasts!
+      </p>
+      <button class="buyProd" type="button">buy product</button>
+      <div class="stock">
+        <svg viewBox="25 13 85 85" width="20" height="20" style="">
+          <circle cx="50" cy="50" r="25" fill="#00d989"></circle>
+        </svg>
+        <p>50+ pcs. in stock.</p>
+      </div>
+      <div class="botonesSec">
+        <button class="botonS"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path
+              d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path
+              d="M17 17h-11v-14h-2"></path><path d="M6 5l14 1l-1 7h-13"
+            ></path></svg
+          > add to cart</button
+        >
+        <button class="botonS"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-heart"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
+            ></path></svg
+          > add to whishlist</button
+        >
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  :root {
+    --colorFondo: #eee;
+    --colorCard: #fff;
+    --colorTexto: #191847;
+    --colorBotonP: #4687e8;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: var(--colorFondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100vh;
+  }
+
+  article {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--colorCard);
+    padding: 20px;
+    border-radius: 25px;
+    max-width: 650px;
+    min-height: 450px;
+    box-shadow: 6px 6px 38px -3px rgba(0, 0, 0, 0.25);
+  }
+
+  article img {
+    transition: 0.3s ease-in-out;
+  }
+
+  .badge {
+    padding: 5px;
+    background-color: var(--colorTexto);
+    color: #fff;
+    border-radius: 15px;
+    font-size: 14px;
+  }
+
+  h2 {
+    padding-top: 15px;
+    color: var(--colorTexto);
+    font-weight: 600;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+  }
+
+  del {
+    color: var(--colorTexto);
+    font-size: 12px;
+  }
+
+  .price {
+    color: var(--colorTexto);
+    font-weight: 800;
+    font-size: 28px;
+  }
+
+  .desc {
+    color: var(--colorTexto);
+    font-size: 10px;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+
+  .buyProd {
+    background-color: var(--colorBotonP);
+    padding: 15px;
+    outline: none;
+    border: none;
+    color: #fff;
+    width: 100%;
+    text-transform: capitalize;
+    border-radius: 5px;
+    border-bottom: 6px solid var(--colorTexto);
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .stock {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .botonesSec {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0 5%;
+  }
+
+  .botonS {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--colorTexto);
+    border: 1px solid var(--colorTexto);
+    background-color: transparent;
+    padding: 15px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+  }
+
+  .botonS svg {
+    margin-right: 5px;
+  }
+
+  /*    HOVER SECTION   */
+
+  article:hover img {
+    translate: 0 -15px;
+    transition: 0.3s ease-in-out all;
+  }
+
+  .buyProd:hover {
+    transition: 0.3s ease-in-out;
+    background-color: var(--colorTexto);
+    border-bottom: 6px solid var(--colorBotonP);
+    cursor: pointer;
+  }
+
+  .botonS:hover {
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .botonS:hover svg {
+    transition: 0.3s ease-in-out;
+    fill: #191847;
+  }
+
+  @media (max-width: 768px) {
+    article {
+      display: flex;
+      flex-direction: column;
+      max-width: 420px;
+    }
+  }
+</style>
