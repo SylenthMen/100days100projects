@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import QrPage from "../../components/QrPage.astro";
+---
+
+<Layout title="reto 7 | Qr Code Component">
+  <article>
+    <div class="bgQr">
+      <QrPage ancho="200" alto="200" color="#ffffff" />
+    </div>
+    <div class="info">
+      <h2 class="titulo">Improve your front-end skills by building projects</h2>
+      <p class="desc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, placeat
+        tempora accusantium soluta dicta blanditiis!
+      </p>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  :root {
+    --colorCard: #fff;
+    --colorQrBg: #2a7dfa;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+    background: radial-gradient(#2a7dfa85 0% 50%, #ffffff85 75% 100%);
+  }
+
+  article {
+    max-width: 300px;
+    background-color: var(--colorCard);
+    padding: 20px;
+    border-radius: 25px;
+  }
+
+  .bgQr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorQrBg);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .info .titulo {
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .info .desc {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 200;
+    margin-bottom: 20px;
+  }
+</style>
