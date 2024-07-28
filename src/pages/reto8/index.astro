@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Reto 8 | NFT Card Preview">
+  <article>
+    <div class="foto">
+      <img src="/nft.jpeg" alt="nft image" />
+    </div>
+    <div class="info">
+      <h2 class="titulo">Equilibrium #3429</h2>
+      <p class="desc">Our Equilibrium collection promotes balance and calm.</p>
+      <div class="details">
+        <p class="coin">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 18"
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-currency-ethereum"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M6 12l6 -9l6 9l-6 9z"></path><path d="M6 12l6 -3l6 3l-6 2z"
+            ></path></svg
+          > 0.041eth
+        </p>
+        <p class="date">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 24 18"
+            fill="currentColor"
+            class="icon icon-tabler icons-tabler-filled icon-tabler-clock"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-5 2.66a1 1 0 0 0 -.993 .883l-.007 .117v5l.009 .131a1 1 0 0 0 .197 .477l.087 .1l3 3l.094 .082a1 1 0 0 0 1.226 0l.094 -.083l.083 -.094a1 1 0 0 0 0 -1.226l-.083 -.094l-2.707 -2.708v-4.585l-.007 -.117a1 1 0 0 0 -.993 -.883z"
+            ></path></svg
+          > 3 days left
+        </p>
+      </div>
+      <hr />
+      <div class="profile">
+        <img src="/person.jpg" alt="profile picture" />
+        <p>Creation of <strong>sylenth men</strong></p>
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  :root {
+    --colorFondo: #0d1a2e;
+    --colorCard: #15284085;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+    background: var(--colorFondo);
+  }
+
+  article {
+    width: 300px;
+    background-color: var(--colorCard);
+    padding: 20px;
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 0px 87px 4px rgba(45, 255, 196, 0.51);
+    box-shadow: 0px 0px 87px 4px rgba(45, 255, 196, 0.51);
+  }
+
+  .foto img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 300px;
+  }
+
+  .info .titulo {
+    color: #fff;
+    font-weight: 400;
+  }
+
+  .info .desc {
+    color: #ffffff80;
+    font-weight: 200;
+  }
+
+  .info .details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .details .coin {
+    font-size: 14px;
+    color: #2af5f1;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .details .date {
+    font-size: 14px;
+    color: #ffffff80;
+  }
+
+  hr {
+    opacity: 0.2;
+  }
+
+  .profile {
+    display: flex;
+    gap: 5%;
+    color: #ffffff80;
+    font-size: 14px;
+    align-items: center;
+  }
+
+  .profile img {
+    border: 2px solid #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  strong {
+    color: #fff;
+  }
+</style>
