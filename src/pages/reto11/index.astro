@@ -1,0 +1,141 @@
+---
+import Car from "../../components/Car.astro";
+import Truck from "../../components/Truck.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Reto 11 | 100 Retos Frontend">
+  <section>
+    <article style="background-color: #e38424;">
+      <div class="icon" style="background-color: #b56c1f;">
+        <div class="carrito">
+          <Car color="#fac473" ancho="36" alto="36" />
+        </div>
+      </div>
+      <div class="info">
+        <h2>sedans</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
+          beatae rerum incidunt culpa, illo blanditiis laboriosam! Tempora ipsa
+          quas quod quo beatae nobis aut dolorem error temporibus libero
+          praesentium in corporis at consequatur, perspiciatis maiores!
+        </p>
+        <div class="enlace">
+          <a style="color: #b56c1f;" href="#">learn more</a>
+        </div>
+      </div>
+    </article>
+
+    <article style="background-color: #006b73;">
+      <div class="icon" style="background-color: #06555e;">
+        <div class="carrito">
+          <Truck color="#38b4c2" ancho="36" alto="36" />
+        </div>
+      </div>
+      <div class="info">
+        <h2>suvs</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
+          beatae rerum incidunt culpa, illo blanditiis laboriosam! Tempora ipsa
+          quas quod quo beatae nobis aut dolorem error temporibus libero
+          praesentium in corporis at consequatur, perspiciatis maiores!
+        </p>
+        <div class="enlace">
+          <a style="color: #006b73;" href="#">learn more</a>
+        </div>
+      </div>
+    </article>
+
+    <article style="background-color: #00403e;">
+      <div class="icon" style="background-color: #013336;">
+        <div class="carrito">
+          <Car color="#24b396" ancho="36" alto="36" />
+        </div>
+      </div>
+      <div class="info">
+        <h2>luxury</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
+          beatae rerum incidunt culpa, illo blanditiis laboriosam! Tempora ipsa
+          quas quod quo beatae nobis aut dolorem error temporibus libero
+          praesentium in corporis at consequatur, perspiciatis maiores!
+        </p>
+        <div class="enlace">
+          <a style="color: #00403e;" href="#">learn more</a>
+        </div>
+      </div>
+    </article>
+  </section>
+</Layout>
+
+<style>
+  :root {
+    --colorFondo: #e1e1e1;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+    background: var(--colorFondo);
+  }
+
+  section {
+    display: flex;
+  }
+
+  article {
+    width: 270px;
+    padding: 30px;
+  }
+
+  article h2 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 32px;
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color: #00403e;
+    border-radius: 50%;
+  }
+
+  .carrito {
+    padding-left: 35px;
+  }
+
+  article p {
+    margin-top: 20px;
+    color: #fff;
+    font-weight: 200;
+    font-size: 14px;
+  }
+
+  .enlace {
+    margin-top: 30px;
+    padding: 30px 0 30px 0;
+  }
+
+  article a {
+    text-decoration: none;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 25px;
+  }
+</style>
