@@ -1,0 +1,160 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Reto 12 | 100 retos Frontend">
+  <section>
+    <article>
+      <div class="banner">
+        <img src="/reto12/bg-pattern-card.svg" alt="banner image" />
+      </div>
+      <div class="foto">
+        <img src="/reto12/image-victor.jpg" alt="person picture" />
+      </div>
+      <div class="info">
+        <h2>victor crest</h2>
+        <span class="edad">26</span>
+      </div>
+      <p class="city">London</p>
+      <hr />
+      <div class="stats">
+        <div class="number">
+          <h3>80k</h3>
+          <p class="seg">followers</p>
+        </div>
+        <div class="number">
+          <h3>803k</h3>
+          <p class="seg">likes</p>
+        </div><div class="number">
+          <h3>1.4k</h3>
+          <p class="seg">photos</p>
+        </div>
+      </div>
+    </article>
+  </section>
+</Layout>
+
+<style>
+  :root {
+    --ColorFondo: #18a1ad;
+    --colorCard: #fff;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100vh;
+    background: var(--ColorFondo);
+    position: relative;
+    overflow: hidden;
+  }
+
+  body::before,
+  body::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  body::before {
+    width: 500px;
+    height: 500px;
+    top: -150px;
+    left: -100px;
+    background: radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5) 70%
+    );
+    opacity: 0.2;
+  }
+
+  body::after {
+    width: 500px;
+    height: 500px;
+    bottom: -100px;
+    right: -100px;
+    background: radial-gradient(
+      circle at bottom right,
+      rgba(255, 255, 255, 0) 35%,
+      rgba(255, 255, 255, 0.5) 80%
+    );
+    opacity: 0.2;
+  }
+
+  article {
+    width: 350px;
+    background-color: var(--colorCard);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .banner img {
+    width: 100%;
+  }
+
+  .foto {
+    position: absolute;
+    top: 40%;
+    left: 54%;
+    transform: translate(-60%, -60%);
+  }
+
+  .foto img {
+    border-radius: 50%;
+    border: 4px solid #fff;
+    width: 100px;
+    height: 100px;
+  }
+
+  .info {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+    text-transform: capitalize;
+  }
+
+  .edad {
+    margin-left: 10px;
+    font-weight: normal;
+    color: gray;
+  }
+
+  .city {
+    margin-top: 5px;
+    color: gray;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+
+  hr {
+    opacity: 0.2;
+  }
+
+  .number {
+    text-align: center;
+  }
+
+  .seg {
+    font-weight: 100;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+</style>
