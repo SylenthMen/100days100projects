@@ -1,0 +1,277 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Reto 13 | 100 retos Frontend">
+  <section class="coments">
+    <article class="numbers">
+      <div class="data">
+        <h2 class="title">10,000+ of our users love our products.</h2>
+        <p class="desc">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
+          incidunt odit error voluptatibus voluptas quisquam unde, voluptatem,
+          amet repellat doloribus nesciunt maiores magni, dignissimos eum!
+        </p>
+      </div>
+      <div class="cali">
+        <div class="star one">
+          <span>⭐⭐⭐⭐⭐</span>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="star two">
+          <span>⭐⭐⭐⭐⭐</span>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="star tree">
+          <span>⭐⭐⭐⭐⭐</span>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="reseñas">
+      <div class="cards">
+        <div class="card uno">
+          <div class="perfil">
+            <img src="/person.jpg" alt="person image" />
+            <div>
+              <h3 class="name">coloton smith</h3>
+              <p class="very">verified buyer</p>
+            </div>
+          </div>
+          <div class="testimonial">
+            <p>
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Obcaecati quas nisi explicabo odit quidem velit id in. Sit
+              necessitatibus velit"
+            </p>
+          </div>
+        </div>
+
+        <div class="card dos">
+          <div class="perfil">
+            <img src="/person.jpg" alt="person image" />
+            <div>
+              <h3 class="name">irene roberts</h3>
+              <p class="very">verified buyer</p>
+            </div>
+          </div>
+          <div class="testimonial">
+            <p>
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Obcaecati quas nisi explicabo odit quidem velit id in. Sit
+              necessitatibus velit"
+            </p>
+          </div>
+        </div>
+
+        <div class="card tres">
+          <div class="perfil">
+            <img src="/person.jpg" alt="person image" />
+            <div>
+              <h3 class="name">anne walface</h3>
+              <p class="very">verified buyer</p>
+            </div>
+          </div>
+          <div class="testimonial">
+            <p>
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Obcaecati quas nisi explicabo odit quidem velit id in. Sit
+              necessitatibus velit"
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+</Layout>
+
+<style>
+  :root {
+    --colorFondo: #fff;
+    --colorPrimary: #4f2646;
+    --colorCards: #521f50;
+    --colorSecundary: #521f5025;
+    --colorResaltado: #b36ba1;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: var(--colorFondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+  }
+
+  .numbers {
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title {
+    font-weight: 900;
+    font-size: 38px;
+    color: var(--colorPrimary);
+    width: 340px;
+    line-height: 35px;
+  }
+
+  .desc {
+    width: 340px;
+    margin-top: 20px;
+    font-weight: 200;
+  }
+
+  .star {
+    padding: 10px;
+    background-color: var(--colorSecundary);
+    border-radius: 5px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    color: var(--colorPrimary);
+    font-weight: 700;
+    font-size: 14px;
+    gap: 4%;
+  }
+
+  .one {
+    margin-top: 0;
+  }
+
+  .two {
+    transform: translateX(40px);
+  }
+
+  .tree {
+    transform: translateX(80px);
+  }
+
+  .reseñas {
+    margin-top: 100px;
+  }
+
+  .cards {
+    display: flex;
+    gap: 5%;
+    color: var(--colorFondo);
+    width: 1000px;
+  }
+
+  .card {
+    background-color: var(--colorPrimary);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+  }
+
+  .perfil {
+    display: flex;
+    gap: 10%;
+    align-items: center;
+  }
+
+  .perfil img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .name {
+    text-transform: capitalize;
+    font-size: 14px;
+  }
+
+  .very {
+    color: var(--colorResaltado);
+    text-transform: capitalize;
+    font-size: 14px;
+  }
+
+  .testimonial {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  .dos {
+    transform: translateY(20px);
+  }
+
+  .tres {
+    transform: translateY(40px);
+  }
+
+  @media only screen and (max-width: 992px) {
+    .numbers {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+
+    .one {
+      margin-top: 20px;
+    }
+
+    .two {
+      transform: translateX(0);
+    }
+
+    .tree {
+      transform: translateX(0);
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .numbers {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      transform: translateY(200px);
+    }
+
+    .one {
+      margin-top: 20px;
+    }
+
+    .two {
+      transform: translateX(0);
+    }
+
+    .tree {
+      transform: translateX(0);
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      transform: translateY(200px);
+    }
+  }
+</style>
