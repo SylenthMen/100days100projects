@@ -1,0 +1,182 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Lupa from "./Lupa.astro";
+import Page from "./Page.astro";
+import Foco from "./Foco.astro";
+import Monitor from "./Monitor.astro";
+---
+
+<Layout title="Reto 14 | 100 Retos Frontend">
+  <header class="presentation">
+    <h1 class="menos">
+      Reliable, efficient delivery
+      <br />
+      <strong>Powered by Technology</strong>
+    </h1>
+    <p>
+      Our Artificial intelligence powered tools use millons of project data
+      points to ensure that your project is successful.
+    </p>
+  </header>
+  <section class="container">
+    <article class="uno">
+      <div class="texto">
+        <h3>Supervisor</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      </div>
+      <div class="lupa">
+        <Lupa />
+      </div>
+    </article>
+    <article class="dos">
+      <div class="texto">
+        <h3>Team Builder</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      </div>
+      <div class="lupa">
+        <Page />
+      </div>
+    </article>
+    <article class="tres">
+      <div class="texto">
+        <h3>Karma</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      </div>
+      <div class="lupa">
+        <Foco />
+      </div>
+    </article>
+    <article class="cuatro">
+      <div class="texto">
+        <h3>Karma</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      </div>
+      <div class="lupa">
+        <Monitor />
+      </div>
+    </article>
+  </section>
+</Layout>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #e1e1e1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  header {
+    margin-top: 50px;
+    text-align: center;
+    width: 500px;
+  }
+
+  .menos {
+    font-weight: 300;
+  }
+
+  .presentation p {
+    margin-top: 20px;
+    font-weight: 200;
+  }
+
+  .container {
+    display: grid;
+    justify-content: center;
+    gap: 0 7%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". dos ."
+      "uno . cuatro"
+      ". tres .";
+  }
+
+  .uno {
+    grid-area: uno;
+    border-top: 4px solid #8beef0;
+    width: 350px;
+    height: 250px;
+    transform: translateX(40px);
+    box-shadow: 20px 20px 20px #00000025;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .texto {
+    margin-bottom: 50px;
+  }
+
+  .texto h3 {
+    margin-bottom: 20px;
+  }
+
+  .texto p {
+    font-weight: 200;
+  }
+
+  .lupa {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .dos {
+    border-top: 4px solid #a33638;
+    grid-area: dos;
+    width: 350px;
+    height: 250px;
+    transform: translateY(110px);
+    background-color: #fff;
+    box-shadow: 20px 20px 20px #00000025;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .tres {
+    border-top: 4px solid #e8a841;
+    grid-area: tres;
+    width: 350px;
+    height: 250px;
+    transform: translateY(-110px);
+    box-shadow: 20px 20px 20px #00000025;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .cuatro {
+    border-top: 4px solid #3a7ebd;
+    grid-area: cuatro;
+    width: 350px;
+    height: 250px;
+    transform: translateX(-40px);
+    box-shadow: 20px 20px 20px #00000025;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+  }
+</style>
